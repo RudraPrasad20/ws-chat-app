@@ -8,7 +8,7 @@ function App() {
   const [newMessage, setNewMessage] = useState("");
 
   useEffect(() => {
-    const newSocket = new WebSocket("ws://localhost:8080");
+    const newSocket = new WebSocket("https://realtime-ws-chat.vercel.app");
     newSocket.onopen = () => {
       console.log("Connection established");
       newSocket.send("Hello Server!");
